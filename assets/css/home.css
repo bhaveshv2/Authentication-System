@@ -1,0 +1,31 @@
+#homepage {
+  text-align: center;
+  margin-top: 100px; }
+  #homepage #homepage-container {
+    margin-top: 100px; }
+    #homepage #homepage-container p {
+      margin-bottom: 30px; }
+    #homepage #homepage-container a {
+      text-decoration: none;
+      border: 2px solid black;
+      padding: 10px; }
+  #homepage #signup-container {
+    margin-top: 100px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    background-color: white;
+    padding: 10px 0px; }
+    #homepage #signup-container #signup-form-container {
+      display: flex;
+      flex-direction: column; }
+      #homepage #signup-container #signup-form-container form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        position: relative;
+        left: 25%; }
+        #homepage #signup-container #signup-form-container form input {
+          margin: 0.5rem;
+          padding: 10px;
+          border: 2px solid black; }

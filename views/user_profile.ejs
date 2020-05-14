@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/css/profile.css">
+<% if(user){%>
+    <div id="profile-container">
+        <h1>Profile Page</h1>
+        <p>Welcome <%=user.name%></p>
+        <p>Email: <%=user.email%></p>
+
+    </div>    
+<%}%>

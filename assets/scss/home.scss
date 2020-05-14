@@ -1,0 +1,41 @@
+#homepage{
+    text-align: center;
+    margin-top: 100px;
+    
+    #homepage-container{
+        margin-top: 100px;
+        p{
+            margin-bottom: 30px;
+        }
+        a{
+            text-decoration: none;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    }
+
+    #signup-container{
+        margin-top: 100px;
+        width: 50%;
+        position: relative;
+        left:25%;
+        background-color: white;
+        padding: 10px 0px;
+        #signup-form-container{
+            display: flex;
+            flex-direction: column;
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                position: relative;
+                left: 25%;
+                input{
+                    margin: 0.5rem;
+                    padding: 10px;
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/home.css">
+<div id="homepage">
+    <h1>Authentication System | Homepage</h1>
+    
+    <% if(user){%>
+        <div id="homepage-container">
+            <p>Already Signed In</p>
+            <a href="/users/sign-out"> Sign Out</a>
+        </div>
+    <%}else{%>
+        <div id="signup-container">
+            <%- include('user_sign_up'); -%>
+        </div>
+        
+    <%}%>
+</div>

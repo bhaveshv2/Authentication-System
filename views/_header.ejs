@@ -1,0 +1,21 @@
+<header id="navbar">
+    <div id="logo">
+        <a href="/" id="home">Authentication System</a>
+    </div>
+
+    <div id="auth-links">
+        <ul>
+            <% if(user){%>
+                <div id="logged-in">
+                    <li id="username-avatar"><a href="/users/profile"><%= user.name %></a></li>
+                    <li><a href="/users/sign-out">Sign Out</a></li>
+                </div>
+            <%}else{%>
+                <div id="signin-container">
+                    <%- include('user_sign_in'); -%>
+                </div>
+            <%}%>
+        </ul>
+    </div>
+
+</header>

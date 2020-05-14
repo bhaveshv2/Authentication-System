@@ -1,0 +1,40 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    #logo{
+        a{
+            text-decoration: none;
+            color: black;
+            font-size:1.5rem;
+        }
+    }
+    #auth-links{
+        ul{
+            list-style: none;
+            #logged-in{
+                display:flex;
+                a{
+                    text-decoration: none;
+                    margin: 10px;
+                }
+            }
+
+            #signin-container{
+                
+                form{
+                    input{
+                        border:2px solid black;
+                    }
+                    margin-bottom: 10px;
+                }
+                a{
+                    
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

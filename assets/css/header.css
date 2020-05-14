@@ -1,0 +1,23 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px; }
+  #navbar #logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem; }
+  #navbar #auth-links ul {
+    list-style: none; }
+    #navbar #auth-links ul #logged-in {
+      display: flex; }
+      #navbar #auth-links ul #logged-in a {
+        text-decoration: none;
+        margin: 10px; }
+    #navbar #auth-links ul #signin-container form {
+      margin-bottom: 10px; }
+      #navbar #auth-links ul #signin-container form input {
+        border: 2px solid black; }
+    #navbar #auth-links ul #signin-container a {
+      text-decoration: none;
+      font-size: 0.9rem; }
