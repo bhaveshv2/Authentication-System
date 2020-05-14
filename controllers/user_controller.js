@@ -147,7 +147,7 @@ module.exports.forgotPasswordMail = async function(req,res,next){
 }
 
 //Reset Form page controller
-module.exports.viewResetForm = function(req,res){
+module.exports.resetForm = function(req,res){
     if(req.isAuthenticated()){
         return res.redirect('/users/profile');
     }

@@ -20,7 +20,7 @@ router.post('/create',usersController.create);
 //use passport as a middleware to auth
 router.post('/create-session',passport.authenticate('local', {failureRedirect: '/users/sign-in'}), usersController.createSession);
 
-router.get('/reset/:token', usersController.viewResetForm);
+router.get('/reset/:token', usersController.resetForm);
 router.post('/reset/:token', usersController.resetUsingToken);
 
 router.get('/sign-out', usersController.destroySession);
