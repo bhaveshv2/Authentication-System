@@ -1,5 +1,27 @@
 #profile-container {
   text-align: center;
   margin-top: 100px; }
-  #profile-container p {
+  #profile-container #user-profile #user-info p {
     font-weight: 700; }
+  #profile-container #user-profile #reset button {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 0px; }
+  #profile-container #reset-form {
+    display: none;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px; }
+    #profile-container #reset-form form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      position: relative;
+      left: 25%; }
+      #profile-container #reset-form form input {
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid black; }

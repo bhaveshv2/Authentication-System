@@ -23,6 +23,8 @@ router.post('/create-session',passport.authenticate('local', {failureRedirect: '
 router.get('/reset/:token', usersController.resetForm);
 router.post('/reset/:token', usersController.resetUsingToken);
 
+router.post('/update-password',usersController.updatePassword);
+
 router.get('/sign-out', usersController.destroySession);
 
 module.exports = router;

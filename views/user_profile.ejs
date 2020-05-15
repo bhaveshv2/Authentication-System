@@ -1,9 +1,36 @@
 <link rel="stylesheet" href="/css/profile.css">
-<% if(user){%>
-    <div id="profile-container">
-        <h1>Profile Page</h1>
-        <p>Welcome <%=user.name%></p>
-        <p>Email: <%=user.email%></p>
+<div id="profile-container">
+    <div id="user-profile">
+        <div id="user-info">
+            <% if(user){%>
+                <h1>Profile Page</h1>
+                <p>Welcome <%=user.name%></p>
+                <p>Email: <%=user.email%></p>
+            <%}%>
+        </div>
+        <div id="reset">
+            <button id="reset-button" onclick="reset()">Reset Button</button>
+        </div>  
+    </div>
+    <div id="reset-form">
+        <h1>Reset Password</h1>
+        <form action="/users/update-password" method="POST">
+            <input type="password" id="old-password" name="old_password" placeholder="Enter your Old Password!" required>
+            <input type="password" id="new-password" name="new_password" placeholder="Enter your New Password!" required>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm the New Password!" required>
+            <input type="submit" value="Update Password">
+        </form>
+    </div>
+</div>
 
-    </div>    
-<%}%>
+<script>
+    function reset(){
+        let x= document.getElementById('reset-form');
+        if(x.style.display === 'block'){
+            x.style.display = 'none';
+        }else{
+            x.style.display = 'block';
+        }
+
+    }
+</script>

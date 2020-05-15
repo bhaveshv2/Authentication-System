@@ -1,7 +1,40 @@
 #profile-container{
     text-align: center;
     margin-top: 100px;
-    p{
-        font-weight: 700;
+    #user-profile{
+        #user-info{
+            p{
+                font-weight: 700;
+            }
+        }  
+        #reset{
+            button{
+                border:2px solid black;
+                padding:10px;
+                border-radius: 0px;
+            }
+        } 
+    }
+    
+    #reset-form{
+        display: none;
+        width: 50%;
+        position: relative;
+        left:25%;
+        margin-top: 20px;
+        background-color: white;
+        padding: 10px;
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            position: relative;
+            left:25%;
+            input{
+                padding: 10px;
+                margin:5px;
+                border:2px solid black;
+            }
+        }
     }
 }

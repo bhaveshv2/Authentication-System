@@ -194,3 +194,40 @@ module.exports.resetUsingToken = async function(req,res){
         res.redirect('/users/forgot-password');
     }
 }
+
+
+module.exports.updatePassword = async function(req,res){
+    try{
+        //if new password doesnt match
+        if (req.body.new_password != req.body.confirm_password) {
+            req.flash('error', 'Passwords dont match');
+            console.log("passwords dont match");
+            return res.redirect('back');
+        }
+        console.log(req.user.id);
+
+        let user = await User.findById(req.user.id);
+        console.log(user);
+        if(user){
+            if(user.matchPassword(req.body.old_password)){
+                user.password = req.body.new_password;
+                await user.save();
+                console.log(user);
+                req.flash('success', 'Password updated successfully');
+                console.log("password updated successfully");
+            }else{
+                //if previous password is incorrect
+                req.flash('error', 'Incorrect password');
+                console.log("incorrect password");
+            }
+        }else{
+            req.flash('error', 'user not found');
+            console.log("user not found");
+        }
+        return res.redirect('back')
+    }catch(err){
+        console.log(err);
+        req.flash('error', 'Internal system error');
+        return res.redirect('back');
+    }
+}
